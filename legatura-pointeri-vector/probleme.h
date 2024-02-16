@@ -371,6 +371,25 @@ void contorElementePrimeCuUltimul(int* v, int& dim, int& ct) {
 
 }
 
+int cmmdc(int a, int b) {
+
+	while (a != b) {
+		if (a > b) {
+			a = a - b;
+		}
+		if (b > a) {
+			b = b - a;
+		}
+	}
+	return a;
+}
+
+bool isPrimeIntreEle(int a, int b) {
+
+	return cmmdc(a, b) == 1;
+
+}
+
 void aparitieValMax(int* v, int& dim, int& ct, int& max) {
 
 	ct = 0;
@@ -381,4 +400,118 @@ void aparitieValMax(int* v, int& dim, int& ct, int& max) {
 		}
 	}
 
+}
+
+void sumaNTermeni(int* v, int& dim, int& s) {
+
+	cout << s << endl;
+
+	for (int i = dim - 1; i > 0; i--) {
+		s = s - v[i];
+		cout << s << endl;
+
+	}
+
+}
+
+void pozitiePrimTermenInSirSortat(int* v, int& dim, int& poz) {
+
+	poz = v[0];
+	bubbleSort(v, dim);
+
+	for (int i = 0; i < dim; i++) {
+		if (poz == v[i]) {
+			poz = i;
+		}
+	}
+
+
+}
+
+int factorial(int nr) {
+
+	int fact = 1;
+
+	for (int i = 1; i <= nr; i++) {
+		fact = fact * i;
+	}
+	return fact;
+}
+
+void divideFact(int* v, int& dim, int& fact) {
+
+	for (int i = 0; i < dim; i++) {
+		if (factorial(dim) % v[i] == 0) {
+			cout << v[i] << endl;
+		}
+	}
+
+}
+
+void afaraInterval(int* v, int& dim) {
+
+	int prim = v[0];
+	int ultim = v[dim - 1];
+
+	if (prim > ultim) {
+		int aux = prim;
+		prim = ultim;
+		ultim = aux;
+	}
+
+	for (int i = 0; i < dim; i++) {
+		if (v[i] <= prim && v[i] >= ultim) {
+			cout << v[i] << " ";
+		}
+	}
+}
+
+int sumaCif(int nr) {
+
+	int s = 0;
+	while (nr != 0) {
+		int uc = nr % 10;
+		s = s + uc;
+		nr = nr / 10;
+	}
+	return s;
+}
+
+void contorElementeCuAceeasiSumaCif(int*v, int dim, int&ct) {
+
+	ct = 0;
+
+	for (int i = 0, j = dim - 1; i < j; i++, j--) {
+		if (sumaCif(v[i]) == sumaCif(v[j])) {
+			ct++;
+		}
+	}
+
+
+}
+
+void contorElementePrime(int*v, int&dim, int&ct) {
+
+	ct = 0;
+
+	for (int i = 0; i < dim; i++) {
+		for (int j = i + 1; j < dim; j++) {
+			if (nrDivizori(v[i]) == nrDivizori(v[j])) {
+				ct++;
+			}
+		}
+	}
+
+}
+
+void elementePrimeEgalDepartate(int*v, int&dim){
+
+	int ct = 0;
+	for (int i = 0, j = dim - 1; i < j; i++, j--) {
+
+		if (isPrimeIntreEle(v[i], v[j])) {
+			cout << "(" << v[i] << ", " << v[j] << ")" << endl;
+		}
+	}
+	
 }

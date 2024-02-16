@@ -1,2 +1,8 @@
 ﻿  legatura-pointeri-vector.cpp
+C:\mycode\initiere\legatura-pointeri-vector\legatura-pointeri-vector\tema.h(264,19): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+  (compiling source file 'legatura-pointeri-vector.cpp')
+  
+C:\mycode\initiere\legatura-pointeri-vector\legatura-pointeri-vector\tema.h(264,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'legatura-pointeri-vector.cpp')
+  
   legatura-pointeri-vector.vcxproj -> C:\mycode\initiere\legatura-pointeri-vector\x64\Debug\legatura-pointeri-vector.exe

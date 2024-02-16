@@ -167,3 +167,149 @@ void sol10() {
 
 
 }
+
+
+// 11) todo: Calculaţi valoarea minimă minim și valoarea maximă maxim a valorilor elementelor vectorului.
+
+void sol11() {
+
+	int v[10] = { 2, 9, 1, 5, 8 };
+	int dim = 5;
+	int min, max;
+	valMax(v, dim, max);
+	valMin(v, dim, min);
+
+	cout << "Valorea maxima este " << max << " si valorea minima este " << min << endl;
+
+}
+
+
+// 12) todo: Se citește un vector cu n elemente, numere naturale. 
+// Să se determine câte elemente ale vectorului sunt egale cu diferența dintre cea mai mare și cea mai mică valoare din vector.
+
+void sol12() {
+
+	int v[10] = { 7, 7, 9, 2, 4 };
+	int dim = 5;
+	int dif, ct;
+	diferentaMaxMin(v, dim, dif);
+	aparentaDiferentaMaxMin(v, dim, ct, dif);
+
+	cout << "Numarul de elemente care apar care sunt egale cu diferenta dintrea cea mai mare si cea mai mica valorea din vector sunt: " << ct;
+
+
+}
+
+
+// 13) todo: Se dă un şir cu n numere naturale. Să se afişeze suma primilor n termeni din şir, apoi suma primilor n-1 termeni din şir, şi aşa mai departe.
+
+void sol13() {
+
+	int v[10] = { 1, 7, 3 ,4 };
+	int dim = 4;
+	int s;
+	sumaVector(v, dim, s);
+
+	sumaNTermeni(v, dim, s);
+
+}
+
+
+// 14) todo: Se dă un şir cu n numere naturale distincte două câte două. Să se determine poziţia pe care s-ar afla primul element al şirului în şirul sortat.
+
+void sol14() {
+
+	int v[10] = { 267, 13, 45, 628, 7 ,79 };
+	int dim = 6;
+	int poz;
+	pozitiePrimTermenInSirSortat(v, dim, poz);
+
+	cout << "Pozitia primului termen in sirul sortat este " << poz << endl;
+
+}
+
+
+// 15) todo: Se da un vector cu n elemente. Sa se afișeze pe ecran elementele din vector care divid factorialul numărului de elemente n.
+
+void sol15() {
+
+	int v[10] = { 16, 3, 71, 30, 25 };
+	int dim = 5;
+	int fact;
+
+	divideFact(v, dim, fact);
+
+	
+}
+
+
+// 16) todo: Se citește un vector cu n elemente, numere naturale. Să se afișeze elementele vectorului în următoarea ordine: primul, ultimul, al doilea, penultimul, etc.
+
+
+void sol16() {
+
+	int v[10] = { 2, 9, 1, 5, 8 };
+	int dim = 5;
+
+	cout << "Elementele sunt: ";
+	afisarePrimUltim(v, dim);
+
+}
+
+
+// 17) todo: Se dă un șir cu n elemente, numere reale. Să se determine câte dintre elemente se află în afara intervalului închis determinat de primul și ultimul element.
+
+void sol17() {
+
+	int v[10] = { 2, 0.5, 4, -1, -8, -3 };
+	int dim = 6;
+
+	afaraInterval(v, dim);
+
+}
+
+
+// 18) todo: Se dă un vector cu n numere naturale. Să se determine câte dintre perechile de elemente din vector sunt formate din valori cu aceeași sumă a cifrelor.
+
+void sol18() {
+
+	int v[] = { 51, 842, 15, 28, 77, 132 };
+	int dim = 6;
+	int ct;
+	contorElementeCuAceeasiSumaCif(v, dim, ct);
+
+	cout << "Sunt " << ct << " perechi de numere care au aceeasi suma a cifrelor" << endl;
+
+
+
+}
+
+
+// 19) todo: Se dă un vector cu n numere naturale. Să se determine câte dintre perechile de elemente din vector sunt prime între ele.
+
+void sol19() {
+
+	int v[] = { 51, 18, 15, 28, 77, 121 };
+	int dim = 6;
+
+	int ct;
+	contorElementePrime(v, dim, ct);
+
+	cout << "Sunt " << ct << " elemente care sunt prime intre ele " << endl;
+
+}
+
+
+// 20) todo: Se dă un vector cu n numere naturale. Să se determine câte dintre perechile de elemente egal depărtate de capetele vectorului sunt prime între ele.
+
+void sol20() {
+
+	int v[] = { 50, 18, 15, 28, 35, 40 };
+	int dim = 6;
+
+
+	cout << "Elementele care sun egal departe de capetele vectorului si sunt prime intre ele sunt: " << endl;
+
+	elementePrimeEgalDepartate(v, dim);
+
+}
